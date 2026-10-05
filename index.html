@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServeSpace Login Form | ROYAL AUSI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+ 
+        <!-- login form -->
+        <section class="card">
+        <h1>Log in</h1>
+        <p class="subtitle">Welcome Aboard. Enter your details below.</p>
+    
+        <form id="loginForm" novalidate>
+    
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" autocomplete="username" placeholder="Enter your username">
+                <span class="error" id="usernameError" aria-live="polite"></span>
+            </div>
+    
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="password-wrap">
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password">
+                    <button type="button" id="togglePassword" class="toggle" aria-label="Show password">Show</button>
+                </div>
+                <span class="error" id="passwordError" aria-live="polite"></span>
+            </div>
+    
+            <!-- remember me & forgot password -->
+            <div class="options">
+            <label class="remember">
+                <input type="checkbox" id="remember" name="remember">
+                Remember me
+            </label>
+            <a href="#" id="forgotLink">Forgot password?</a>
+            </div>
+    
+            <button type="submit" class="btn-main">Log in</button>
+    
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </form>
+    
+        <div class="divider"><span>or continue with</span></div>
+    
+        <div class="social">
+            <button type="button" class="btn-social" data-provider="Google">
+            <span class="badge">G</span> Google
+            </button>
+            <button type="button" class="btn-social" data-provider="Facebook">
+            <span class="badge">f</span> Facebook
+            </button>
+        </div>
+        </section>
+    
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

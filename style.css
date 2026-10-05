@@ -1,0 +1,217 @@
+/* Colours: only red and white (plus red shades) are used on this page */
+:root {
+  --persianblue: #0a0238;
+  --bluelight: #e3e0fd; 
+  --ghostwhite: #f7f7ff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: helvetica, arial, sans-serif;
+  background: var(--persianblue);
+  color: var(--ghostwhite);
+}
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--ghostwhite);
+  padding: 36px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(214, 207, 251, 0.4);
+}
+.card h1 {
+  font-size: 1.8rem;
+  color: var(--persianblue);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--persianblue);
+}
+.field {
+  margin-bottom: 14px;
+}
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--persianblue);
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: var(--persianblue);
+  background: var(--ghostwhite);
+  border: 2px solid var(--bluelight);
+  border-radius: 8px;
+}
+input::placeholder {
+  color: var(--persianblue);
+  opacity: 0.5;
+}
+input:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--persianblue);
+  outline-offset: 2px;
+}
+input.invalid {
+  border-color: var(--persianblue);
+  background: var(--bluelight);
+}
+.error {
+  display: block;
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--persianblue);
+}
+.password-wrap {
+  position: relative;
+}
+.password-wrap input {
+  padding-right: 70px;
+}
+.toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--persianblue);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--persianblue);
+}
+.remember input {
+  accent-color: var(--persianblue);
+  width: 16px;
+  height: 16px;
+}
+.options a {
+  color: var(--persianblue);
+  font-weight: 600;
+}
+.btn-main {
+  width: 100%;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ghostwhite);
+  background: var(--persianblue);
+  border: 2px solid var(--persianblue);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-main:hover {
+  background: var(--persianblue-dark);
+  border-color: var(--persianblue-dark);
+}
+.form-message {
+  min-height: 22px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--persianblue);
+  text-align: center;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 20px;
+  font-size: 0.85rem;
+  color: var(--persianblue);
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--bluelight);
+}
+ 
+.social {
+  display: flex;
+  gap: 12px;
+}
+.social {
+  display: flex;
+  gap: 12px;
+}
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--persianblue);
+  background: var(--white);
+  border: 2px solid var(--persianblue);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-social:hover {
+  background: var(--persianblue-light);
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--persianblue);
+  color: var(--ghostwhite);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+/* responsiveness */
+@media (max-width: 480px) {
+  .page {
+    padding: 12px;
+  }
+  .card {
+    padding: 28px 20px;
+  }
+  .social {
+    flex-direction: column;
+  }
+}
